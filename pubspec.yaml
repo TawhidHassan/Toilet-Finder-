@@ -38,7 +38,10 @@ dependencies:
   path_provider:
   intl: 0.17.0
   logger: ^1.0.0
-
+  flutter_bloc: ^7.3.0
+  location:
+  geolocator: ^7.7.0
+  flutter_rating_bar: ^4.0.1
   flutter:
     sdk: flutter
 
@@ -51,8 +54,18 @@ dev_dependencies:
   build_runner: ^2.0.0
   json_serializable:
   hive_generator:
+  flutter_native_splash: ^2.0.0
+
+flutter_native_splash:
+  color: "#EF5777"
+  image: assets/images/logo.png
+  android: true
+  ios: true
+
   flutter_test:
     sdk: flutter
+
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
