@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'dart:typed_data';
+import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,10 +9,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:logger/logger.dart';
 import 'package:toiletfinder/Constants/Colors/app_colors.dart';
-import 'dart:ui' as ui;
+
 import '../../../../Config/text_style.dart';
+import '../../../../Constants/Strings/app_strings.dart';
 import '../../../../Utils/MapUtils/Utils.dart';
 import '../../../Widgets/Button/custom_button.dart';
 
@@ -206,7 +207,7 @@ class _HomeMapBuilDerState extends State<HomeMapBuilDer> {
                       child: Container(
                         margin: EdgeInsets.only(right: 10),
                         child: CustomButton(color: kPrimaryColorx,title: "ListView",onTap: (){
-
+                          Navigator.pushNamed(context, TOILET_PAGE);
                         },),
                       )
                   )

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../Config/text_style.dart';
+import '../../../Constants/Strings/app_strings.dart';
 import '../../Widgets/TextField/search_textdield.dart';
 import 'MapSection/map_builder.dart';
 
@@ -35,9 +36,14 @@ class _HomeState extends State<Home> {
             children: [
               Expanded(
                   flex: 1,
-                  child:CircleAvatar(
-                    radius:32,
-                    child: Text("T"),
+                  child:InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, PROFILE_PAGE);
+                    },
+                    child: CircleAvatar(
+                      radius:32,
+                      child: Image.asset("assets/images/logo.png"),
+                    ),
                   )
               ),
               Expanded(

@@ -15,3 +15,11 @@ const MAIN_PAGE = "/main_page";
 const HOME_PAGE = "/home_page";
 const LOGIN_PAGE = "/login_page";
 const FORGET_PASSWORD_PAGE = "/forget_pass_page";
+
+
+//toilet
+const TOILET_PAGE = "/TOILET_PAGE";
+const TOILET_DETAILS_PAGE = "/TOILET_DETAILS_PAGE";
+
+//profile
+const PROFILE_PAGE = "/PROFILE_PAGE";
