@@ -75,7 +75,7 @@ class _HomeMapBuilDerState extends State<HomeMapBuilDer> {
           ),
           myLocationEnabled: true,
           markers: Set<Marker>.of(_markers),
-          zoomControlsEnabled: true,
+          zoomControlsEnabled: false,
           onMapCreated: onMapCreated,
           mapType: _currentMapType,
         ):Center(child: CircularProgressIndicator(),),

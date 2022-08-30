@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_share/flutter_share.dart';
 
 import '../../../Config/text_style.dart';
+import '../../../Constants/Strings/app_strings.dart';
 import 'Component/profile_button.dart';
 
 class Profilepage extends StatefulWidget {
@@ -86,19 +88,35 @@ class _ProfilepageState extends State<Profilepage> {
               SizedBox(
                 height: 16.h,
               ),
-              ProfileButton(title: "Add Toilet",icon: "assets/icons/add _toilet.svg",color: Color(0xFFFCAF2A)),
+              InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, ADD_TOILET_PAGE);
+                  },
+                  child: ProfileButton(title: "Add Toilet",icon: "assets/icons/add _toilet.svg",color: Color(0xFFFCAF2A))),
               SizedBox(
                 height: 24.h,
               ),
-              ProfileButton(title: "My Added Toilet",icon: "assets/icons/my_added_toilet.svg",color: Color(0xFFF00C1F7)),
+              InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, MY_ADDED_TOILET_PAGE);
+                  },
+                  child: ProfileButton(title: "My Added Toilet",icon: "assets/icons/my_added_toilet.svg",color: Color(0xFFF00C1F7))),
               SizedBox(
                 height: 24.h,
               ),
-              ProfileButton(title: "My Review",icon: "assets/icons/Star.svg",color: Color(0xFFF456EFE)),
+              InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, MY_REVIEW_PAGE);
+                  },
+                  child: ProfileButton(title: "My Review",icon: "assets/icons/Star.svg",color: Color(0xFFF456EFE))),
               SizedBox(
                 height: 24.h,
               ),
-              ProfileButton(title: "Settings",icon: "assets/icons/Settings.svg",color: Color(0xFFFB139FF)),
+              InkWell(
+                  onTap: (){
+                      Navigator.pushNamed(context, SETTING_PAGE);
+                    },
+                  child: ProfileButton(title: "Settings",icon: "assets/icons/Settings.svg",color: Color(0xFFFB139FF))),
               SizedBox(
                 height: 24.h,
               ),
@@ -110,7 +128,11 @@ class _ProfilepageState extends State<Profilepage> {
               SizedBox(
                 height: 24.h,
               ),
-              ProfileButton(title: "Share App",icon: "assets/icons/Share.svg",color: Color(0xFF1CCD9D)),
+              InkWell(
+                  onTap: (){
+                    share();
+                  },
+                  child: ProfileButton(title: "Share App",icon: "assets/icons/Share.svg",color: Color(0xFF1CCD9D))),
               SizedBox(
                 height: 24.h,
               ),
@@ -128,4 +150,14 @@ class _ProfilepageState extends State<Profilepage> {
       ),
     );
   }
+
+
+}
+Future<void> share() async {
+  await FlutterShare.share(
+      title: 'Share My App',
+      text: ' Womlet Share With Your Friends ',
+      linkUrl: 'https://flutter.dev/',
+      chooserTitle: 'Womlet Share With Your Friends'
+  );
 }

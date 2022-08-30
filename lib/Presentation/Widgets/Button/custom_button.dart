@@ -5,9 +5,11 @@ import '../../../Config/text_style.dart';
 class CustomButton extends StatelessWidget {
   final String? title;
   final Color? color;
+  final double? height;
+  final bool? boder;
   final Color? textColor;
   final VoidCallback? onTap;
-  CustomButton({ this.title, this.color, this.textColor, this.onTap,Key? key}) : super(key: key);
+  CustomButton({ this.title, this.color, this.textColor, this.onTap,Key? key, this.boder=false, this.height=46}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +17,17 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width:double.infinity,
-        height:46.h,
-        decoration: BoxDecoration(
+        height:height!.h,
+        decoration:boder!? BoxDecoration(
+          border: Border.all(color: color!),
+          borderRadius: BorderRadius.circular(10),
+        ):BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
           child: Text('$title',
-            style: boldText(16.sp,color: Colors.white),
+            style: boldText(16.sp,color:boder!? color!: Colors.white),
               textScaleFactor: 1.0),
         ),
       ),

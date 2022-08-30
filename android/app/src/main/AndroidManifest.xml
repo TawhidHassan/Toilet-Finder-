@@ -8,6 +8,17 @@
         android:label="toiletfinder"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+       <provider
+           android:name="androidx.core.content.FileProvider"
+           android:authorities="${applicationId}.provider"
+           android:exported="false"
+           android:grantUriPermissions="true">
+           <meta-data
+               android:name="android.support.FILE_PROVIDER_PATHS"
+               android:resource="@xml/provider_paths"/>
+       </provider>
+
        <!-- TODO: Add your Google Maps API key here -->
        <meta-data android:name="com.google.android.geo.API_KEY"
            android:value="AIzaSyDOYE_3Vd5hdcCRKX1LykfNAIdud_CINJg"/>

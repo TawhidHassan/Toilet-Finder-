@@ -20,6 +20,12 @@ const FORGET_PASSWORD_PAGE = "/forget_pass_page";
 //toilet
 const TOILET_PAGE = "/TOILET_PAGE";
 const TOILET_DETAILS_PAGE = "/TOILET_DETAILS_PAGE";
+const ADD_TOILET_PAGE = "/ADD_TOILET_PAGE";
+const MY_ADDED_TOILET_PAGE = "/MY_ADDED_TOILET_PAGE";
+const MY_REVIEW_PAGE = "/MY_REVIEW_PAGE";
 
 //profile
 const PROFILE_PAGE = "/PROFILE_PAGE";
+
+//Settings
+const SETTING_PAGE = "/SETTING_PAGE";
