@@ -104,8 +104,9 @@ class _HomeMapBuilDerState extends State<HomeMapBuilDer> {
         ),
         Align(
             alignment: Alignment.bottomCenter,
-            child: SizedBox(
+            child: Container(
               height:180.h,
+              width: 1.0.sw,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
@@ -127,33 +128,36 @@ class _HomeMapBuilDerState extends State<HomeMapBuilDer> {
                             children: [
                               Image.asset("assets/images/toilet.png",height: 48.h,width: 56.w),
                               SizedBox(width: 8.w,),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Text("Prescription Tower",style: boldText(14.sp,color: Colors.black),textScaleFactor: 1.0),),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Text("Prescription Tower",style: boldText(14.sp,color: Colors.black),textScaleFactor: 1.0),),
 
-                                  Expanded(child: Text("House - Ga 136 (level 3) Pragati",style: regularText(14.sp,color: Colors.grey),textScaleFactor: 1.0),),
-                                  Expanded(
-                                    child: RatingBar.builder(
-                                      initialRating: 3,
-                                      minRating: 2,
-                                      direction: Axis.horizontal,
-                                      allowHalfRating: true,
-                                      itemCount: 5,
-                                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                      itemSize: 30,
-                                      itemBuilder: (context, _) => Icon(
-                                        Icons.star,
-                                        color: Colors.amber,
+                                    Expanded(child: Text("House - Ga 136 (level 3) Pragati",style: regularText(14.sp,color: Colors.grey),textScaleFactor: 1.0),),
+                                    Expanded(
+                                      child: RatingBar.builder(
+                                        initialRating: 3,
+                                        minRating: 2,
+                                        direction: Axis.horizontal,
+                                        allowHalfRating: true,
+                                        itemCount: 5,
+                                        itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                                        itemSize: 25,
+                                        itemBuilder: (context, _) => Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        ),
+                                        onRatingUpdate: (rating) {
+                                          print(rating);
+                                        },
                                       ),
-                                      onRatingUpdate: (rating) {
-                                        print(rating);
-                                      },
-                                    ),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           ),
@@ -171,30 +175,36 @@ class _HomeMapBuilDerState extends State<HomeMapBuilDer> {
                             children: [
                               Image.asset("assets/images/toilet.png",height: 48.h,width: 56.w),
                               SizedBox(width: 8.w,),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(child: Text("Prescription Tower",style: boldText(14.sp,color: Colors.black),textScaleFactor: 1.0),),
-                                  Expanded(child: Text("House - Ga 136 (level 3) Pragati \nsarani, Dhaka",style: regularText(14.sp,color: Colors.grey),textScaleFactor: 1.0),),
-                                  Expanded(
-                                    child: RatingBar.builder(
-                                      initialRating: 3,
-                                      minRating: 2,
-                                      direction: Axis.horizontal,
-                                      allowHalfRating: true,
-                                      itemCount: 5,
-                                      itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                                      itemSize: 30,
-                                      itemBuilder: (context, _) => Icon(
-                                        Icons.star,
-                                        color: Colors.amber,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Text("Prescription Tower",style: boldText(14.sp,color: Colors.black),textScaleFactor: 1.0),),
+
+                                    Expanded(child: Text("House - Ga 136 (level 3) Pragati",style: regularText(14.sp,color: Colors.grey),textScaleFactor: 1.0),),
+                                    Expanded(
+                                      child: RatingBar.builder(
+                                        initialRating: 3,
+                                        minRating: 2,
+                                        direction: Axis.horizontal,
+                                        allowHalfRating: true,
+                                        itemCount: 5,
+                                        itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                                        itemSize: 25,
+                                        itemBuilder: (context, _) => Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        ),
+                                        onRatingUpdate: (rating) {
+                                          print(rating);
+                                        },
                                       ),
-                                      onRatingUpdate: (rating) {
-                                        print(rating);
-                                      },
-                                    ),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           ),
