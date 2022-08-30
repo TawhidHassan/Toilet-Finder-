@@ -56,6 +56,7 @@ class _HomeState extends State<Home> {
               Expanded(
                   flex: 8,
                   child: Container(
+                    height: 32.h,
                       margin: EdgeInsets.only(top: 0.h,left: 8.w),
                       child: MaterialSearchyTextField(controller: searchController, readOnly: false, lable: '', hintText: '',)))
             ],

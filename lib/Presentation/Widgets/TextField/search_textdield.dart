@@ -15,6 +15,7 @@ class MaterialSearchyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return TextFormField(
+
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Please fillup';
@@ -25,16 +26,17 @@ class MaterialSearchyTextField extends StatelessWidget {
       readOnly: readOnly,
       controller: controller,
       decoration: InputDecoration(
+
         prefixIcon: new Padding(
-          padding: const EdgeInsets.only( top: 15, left: 5, right: 0, bottom: 15),
+          padding: const EdgeInsets.only( top: 5, left: 5, right: 0, bottom: 5),
           child: Icon(Icons.search)
         ),
         hintText: hintText,
         labelText: lable,
         contentPadding:
-        EdgeInsets.symmetric(vertical: 20.0, horizontal: 12.0),
+        EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide:
